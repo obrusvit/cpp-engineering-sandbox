@@ -46,6 +46,16 @@ function(cpp_engineering_sandbox_setup_dependencies)
       v1.2.2)
   endif()
 
+  if(NOT TARGET Eigen3::Eigen)
+    cpmaddpackage(
+      NAME
+      Eigen
+      GIT_REPOSITORY
+      https://gitlab.com/libeigen/eigen.git
+      GIT_TAG
+      3.4.0)
+  endif()
+
   if(NOT TARGET tools::tools)
     cpmaddpackage("gh:lefticus/tools#update_build_system")
   endif()
