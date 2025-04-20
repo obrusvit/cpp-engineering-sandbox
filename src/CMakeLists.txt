@@ -1,4 +1,5 @@
 add_subdirectory(sample_library)
 add_subdirectory(lowpass)
 add_subdirectory(sys_lin_eq)
+add_subdirectory(integrator)
 add_subdirectory(ftxui_sample)
