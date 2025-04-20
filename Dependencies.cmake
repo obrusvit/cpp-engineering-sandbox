@@ -36,6 +36,16 @@ function(cpp_engineering_sandbox_setup_dependencies)
     cpmaddpackage("gh:ArthurSonzogni/FTXUI@5.0.0")
   endif()
 
+  if(NOT TARGET Matplot++::matplot)
+    cpmaddpackage(
+      NAME
+      matplotplusplus
+      GITHUB_REPOSITORY
+      alandefreitas/matplotplusplus
+      GIT_TAG
+      v1.2.2)
+  endif()
+
   if(NOT TARGET tools::tools)
     cpmaddpackage("gh:lefticus/tools#update_build_system")
   endif()
