@@ -60,6 +60,16 @@ function(cpp_engineering_sandbox_setup_dependencies)
     cpmaddpackage("gh:nholthaus/units@2.3.4")
   endif()
 
+  if(NOT TARGET NLopt::nlopt)
+    cpmaddpackage(
+      NAME
+      nlopt
+      GITHUB_REPOSITORY
+      stevengj/nlopt
+      GIT_TAG
+      v2.10.0)
+  endif()
+
   if(NOT TARGET tools::tools)
     cpmaddpackage("gh:lefticus/tools#update_build_system")
   endif()
