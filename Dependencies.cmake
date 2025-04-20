@@ -56,6 +56,10 @@ function(cpp_engineering_sandbox_setup_dependencies)
       3.4.0)
   endif()
 
+  if(NOT TARGET units::units)
+    cpmaddpackage("gh:nholthaus/units@2.3.4")
+  endif()
+
   if(NOT TARGET tools::tools)
     cpmaddpackage("gh:lefticus/tools#update_build_system")
   endif()
